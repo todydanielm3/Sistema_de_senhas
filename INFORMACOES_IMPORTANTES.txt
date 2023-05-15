@@ -1,0 +1,59 @@
+Esse projetofoi desenvolvido com as seguintes tecnologias:
+- Editor de código: Nvim
+- Linguagem: C++
+- Compilador: g++
+- Sistema operacional: Unix (MacOS)
+
+Como rodar o projeto:
+
+Rodando projeto:
+
+```bash
+g++ -std=c++11 main.cpp entidade.cpp dominio.cpp -o prog
+./prog
+
+```
+
+Rodando testes:
+
+```bash
+g++ -o dominio dominio.cpp test_dominio.cpp
+./dominio
+
+g++ -o entidade entidade.cpp test_entidade.cpp
+./entidade
+
+
+```
+
+
+Documentação do projeto:
+Esse projeto foi documentado utilizando a ferramenta Doxygen. Para acessar a documentação, basta abrir o arquivo index.html que está na pasta html.
+
+
+No arquivo doxygen.config, está a configuração utilizada para gerar a documentação. Para gerar a documentação, basta rodar o comando:
+
+```bash
+#---------------------------------------------------------------------------
+# Configuration options related to the input files
+#---------------------------------------------------------------------------
+
+# The INPUT tag is used to specify the files and/or directories that contain
+# documented source files. You may enter file names like myfile.cpp or
+# directories like /usr/src/myproject. Separate the files or directories with
+# spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
+# Note: If this tag is empty the current directory is searched.
+
+INPUT = entidade.h
+INPUT += entidade.cpp
+INPUT += dominios.h
+INPUT += dominios.cpp
+INPUT += main.cpp
+
+```
+
+```bash
+
+Apos as devidas alterações de configuração, no que diz respeito a documentação usando Doxygen, foi rodado o comando:
+
+doxygen doxyconfig
